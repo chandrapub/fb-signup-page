@@ -7,65 +7,51 @@
     <title>Document</title>
 </head>
 <style>
-    .main-container{
-        margin: 1% 10%;
+    .main-container {
+        box-sizing: border-box;
+        margin: 0% 10%;
         padding: 1% 2%;
     }
-    .order-summary-container{
-        background-color:rgb(254,112,92);
-        padding: 0.1px 2%;
+    .order-summary-container {
+        background-image: linear-gradient(to left, #FF5196, #FC7A48);
+        padding: 0.01% 2%;
     }
-    .headline-text{
+    .headline-text {
         font-size: 2.5em;
         font-weight: bold;
         color: white;
     }
-    .headline-text-black{
+    .headline {
         font-size: 2.5em;
         font-weight: bold;
-        color: black;
+        color: #4F4D50;
         text-align: center;
     }
-    .sub-headline-text{
+    .sub-headline-text {
         font-size: 1.5em;
         font-weight: bold;
         color: white;
     }
-    .sub-headline-text-black{
-        font-size: 1em;
+    .sub-headline {
+        font-size: 1.5em;
         font-weight: bold;
-        color: black;
-      
-    }
-    .soudga-plus:nth-child(){
-        float: right;
-    }
-    .cardImage{
+        color: #4F4D50;
         text-align: center;
     }
-    .paymentMethod{
+    .card-images {
+        text-align: center;
+        justify-content: center;
+    }
+    .card-image {
+        width: 5%;
+    }
+    .payment-method {
         display: flex;
         justify-content: center;
-        /* flex-wrap: nowrap; */
-        /* margin: 0px 30px; */
     }
-   
-    .cardInfo{
+    .payment-info {
         border: 3px solid rgb(254,112,92);
         border-radius: 15px;
-        box-shadow: 0px 0px 30px rgb(230, 224, 224);
-        width: 45%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        margin: 0 10px;
-        
-    }
-    .paypalInfo{
-        border: 1px solid rgb(250, 248, 248);
-        border-radius: 15px;
-        /* text-align: center; */
         padding: 2% 0;
         box-shadow: 0px 0px 30px rgb(230, 224, 224);
         width: 45%;
@@ -73,78 +59,212 @@
         align-items: center;
         flex-direction: column;
         justify-content: center;
-        margin: 0px 10px;
+        margin: 0 2rem;
     }
-    .btn-submit{
-        background-color: brown;
-        width: 300px;
-        height: 60px;
-        border-radius: 30px;
+    .paypal-info {
+        border: 1px solid rgb(250, 248, 248);
+        border-radius: 15px;
+        padding: 2% 0;
+        box-shadow: 0px 0px 30px rgb(230, 224, 224);
+        width: 45%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0px 2rem;
+    }
+    .submit-payment-btn {
+        margin-top: 3rem;
         text-align: center;
     }
-    .soudga-plus-amount{
+    .btn-submit {
+        background-image: linear-gradient(to left, #FF5196, #FC7A48);
+        width: 25rem;
+        height: 4rem;
+        border-radius: 30px;
+        text-align: center;
+        border: none;
+    }
+
+    .soudga-plus-amount {
         display: flex;
         justify-content: space-between;
     }
-    .total-amout{
+    .total-amount {
         display: flex;
         justify-content: space-between;
+    }
+    .card-info {
+        display: flex;
+        justify-content: center;
+    }
+    .card-secure-code {
+        display: flex;
+    }
+ 
+    .card-number-input {
+        width: 40rem;
+        height: 3rem;
+        font-size: 1.5rem;
+        margin: 0rem 1rem;
+        padding-left: 1rem;
+        border-radius: .5rem;
+        border: none;
+        background-color: #F3F1F2;
+    }
+    .card-secure-code-input {
+        width: 20rem;
+        height: 3rem;
+        font-size: 1.5rem;
+        margin: 0rem 1rem;
+        padding-left: 1rem;
+        border-radius: .5rem;
+        border: none;
+        background-color: #F3F1F2;
+    }
+    .need-help {
+        background: linear-gradient(to left, #FF5196, #FC7A48);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 2rem;
+        text-align: center;
+    }
+     
+
+    @media only screen and (max-width: 600px) {
+        body {
+            margin: 0;
+            padding:0;
+        }
+        .main-container {
+            box-sizing: border-box;
+            margin: 0% 0%;
+            padding: 0% 0%;
+        }
+        .order-summary-container {
+            background-image: linear-gradient(to left, #FF5196, #FC7A48);
+        }
+        .card-secure-code {
+            display: block;
+        }
+        .card-info{
+            display: flex;
+            flex-direction: column;
+        }
+        .card-number-input {
+            width: 20rem;
+            height: 3rem;
+            font-size: 1.5rem;
+            margin: 0rem 1rem;
+            padding-left: 1rem;
+            border-radius: .5rem;
+            border: none;
+            background-color: #F3F1F2;
+        }
+        .card-secure-code-input {
+            width: 8rem;
+            height: 3rem;
+            font-size: 1.5rem;
+            margin: 0rem 1rem 0rem 1.3rem;
+            border-radius: .5rem;
+            border: none;
+            background-color: #F3F1F2;
+        }
+        .card-secure-code {
+            display: flex;
+            flex-direction: row;
+        }
+        .card-images{
+            margin: 1rem 0 1rem 0;
+        }
+        .card-image {
+            width: 20%;
+        }
+        .payment-info {
+            border: 0px solid white;
+            padding: 0rem 0rem;
+            margin: 0rem 0rem;
+            box-shadow: none;
+            width: 50%;
+        }
+        .paypal-info {
+            margin: 0rem 0rem;
+            padding: 0% 0%;
+            box-shadow: none;
+            background-color: lightgray;
+            border-radius: 0px;
+            width: 50%;
+            padding-top: 1rem;
+        }
+        .btn-submit {
+            width: 20rem;
+        }
+        .headline{
+            display: none;
+        }
     }
    
 </style>
 <body>
     <div class="main-container">
         <div class="order-summary-container">
-            <p class="headline-text">Order Summary</p>
+            <h1 class="headline-text">Order Summary</h1>
             <div class="soudga-plus-amount">
-                <p class="soudga-plus sub-headline-text">Soudga Plus: 3 months</p>
-                <p class="month-amount sub-headline-text">$33.33/month</p>
+                <h3 class="sub-headline-text">Soudga Plus: 3 months</h3>
+                <h3 class="sub-headline-text">$33.33/month</h3>
             </div>
             <hr>
-            <div class="total-amout">
+            <div class="total-amount">
                 <p class="sub-headline-text">Total</p>
                 <p class="sub-headline-text">$100</p>
             </div> 
         </div>
-        <p class="headline-text-black">Payment Method</p>
-        <div class="paymentMethod">
-            <div class="cardInfo">  
-                 <div class="cardImage">
-                        <img src="https://www.getwox.com/wp-content/uploads/2021/01/cred-crd.jpg" alt="" width="5%">
-                        <img src="https://www.getwox.com/wp-content/uploads/2021/01/cred-crd.jpg" alt="" width="5%">
+        <p class="headline">Payment Method</p>
+        <div class="payment-method">
+            <div class="payment-info">
+                <div class="card-images">
+                    <img class="card-image" src="https://www.getwox.com/wp-content/uploads/2021/01/cred-crd.jpg"
+                        alt="payment card image" width="5%">
+                    <img class="card-image" src="https://www.getwox.com/wp-content/uploads/2021/01/cred-crd.jpg"
+                        alt="payment card image" width="5%">
                         <br>
-                        <img src="https://www.getwox.com/wp-content/uploads/2021/01/cred-crd.jpg" alt="" width="5%">
-                        <img src="https://www.getwox.com/wp-content/uploads/2021/01/cred-crd.jpg" alt="" width="5%">
-                        <p class="sub-headline-text-black">Credit/Debit</p>
+                        <img class="card-image" src="https://www.getwox.com/wp-content/uploads/2021/01/cred-crd.jpg" alt="payment card image"
+                            width="5%">
+                        <img class="card-image" src="https://www.getwox.com/wp-content/uploads/2021/01/cred-crd.jpg" alt="payment card image"
+                            width="5%">
+                        <p class="sub-headline">Credit/Debit</p>
                 </div>
             </div>
-            <div class="paypalInfo"> 
-                <img src="https://www.getwox.com/wp-content/uploads/2021/01/cred-crd.jpg" alt="" width="10%">
-                <p class="sub-headline-text-black">PayPal</p>
+            <div class="paypal-info">
+                <img class="card-image" src="https://www.getwox.com/wp-content/uploads/2021/01/cred-crd.jpg" alt="" width="10%">
+                <p class="sub-headline">PayPal</p>
             </div>
         </div>
         <div>
             <form action="">
-            <p class="headline-text-black">Card Info</p>
-                <div>
-                    <div >
-                        <p class="sub-headline-text-black">Card number</p>
-                        <input type="text"  name="cardnumber" placeholder="1234 1234 1234 1234">
+            <p class="headline">Card Info</p>
+            <div class="card-info">
+                <div class="card-number">
+                    <p class="sub-headline">Card number</p>
+                    <input type="text" class="card-number-input" name="cardnumber" placeholder="1234 1234 1234 1234">
                     </div>
-                    <div>
-                        <div>
-                            <p class="sub-headline-text-black">Expiry date</p>
-                            <input type="text" name="expirydate" placeholder="MM/YY">
+                    <div class="card-secure-code">
+                        <div class="expiry-date">
+                            <p class="sub-headline">Expiry date</p>
+                            <input type="text" class="card-secure-code-input" name="expirydate" placeholder="MM/YY">
                         </div>
-                        <div>
-                            <p class="sub-headline-text-black">Security code</p>
-                            <input type="text" name="secirycode" placeholder="CVV">
+                        <div class="security-code">
+                            <p class="sub-headline">Security code</p>
+                            <input type="text" class="card-secure-code-input" name="secirycode" placeholder="CVV">
                         </div>
                     </div>
+                
                 </div>
-                <button class="sub-headline-text btn-submit" type="submit">Buy Now</button>
+                <div class="submit-payment-btn">
+                    <button class="sub-headline-text btn-submit" type="submit">Buy Now</button>
+                </div>
             </form>
-        <p class="sub-headline-text-black">Need Help?</p>
+        <p class="need-help">Need Help?</p>
         </div>
 
        
