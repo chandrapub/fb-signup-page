@@ -23,7 +23,9 @@ body {
     margin-top: 0;
 }
 
-.navigation {
+.navigation ul{
+    list-style: none;
+    display: flex;
     background-color: burlywood;
     margin: 0 0 0 0;
     padding: 1rem 0rem 1rem 8rem;
@@ -35,7 +37,8 @@ body {
 
 }
 
-a:visited {
+
+.nav-item:visited {
     color: black;
 }
 
